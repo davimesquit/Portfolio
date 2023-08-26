@@ -3,7 +3,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
@@ -35,11 +35,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: var(--bg-color);
     padding: 22px 15%;
     border-bottom: 1px solid transparent;
     transition: all .45s ease;
 }
+
 
 .logo {
     color: var(--text-color);
@@ -203,6 +204,7 @@ section {
 }
 
 
+
 .main-text {
     text-align: center;
 }
@@ -218,9 +220,17 @@ section {
     line-height: 1;
 }
 
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
 
 .box {
-    background: var(--bg-color);
+    background: transparent;
     padding: 35px 45px;
     border-radius: 8px;
     transition: all .45s ease;
@@ -248,7 +258,6 @@ section {
 
 .box:hover {
     transform: translateY(-8px);
-    cursor: pointer;
 }
 
 .portfolio-content {
@@ -268,9 +277,11 @@ section {
 
 .row img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
     display: block;
     transition: transform 0.5s;
+    object-fit: cover;
 }
 
 .layer {
@@ -385,6 +396,23 @@ section {
     border-radius: 8px;
     margin-right: 15px;
     transition: all .45s ease;
+}
+
+.skills-icons{
+    height: 45px;
+    width: 45px;
+    color:#9400D3;
+    font-size: 22px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 15px;
+    transition: all .45s ease;
+}
+
+.skills{
+    background: var(--second-bg-color);
 }
 
 .contact-icons i:hover {
