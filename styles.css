@@ -372,6 +372,13 @@ section {
 
 }
 
+.imgsobrem{
+text-align: center;
+display:flex;
+justify-content:space-around;
+}
+
+
 .list li a {
     display: block;
     color: var(--second-color);
